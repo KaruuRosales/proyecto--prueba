@@ -1,0 +1,93 @@
+.item {
+    background-color: #5CA967 ;
+    border: 1px black solid;
+}
+
+
+.item p {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.gridPadre {
+    display: grid;
+
+    /*CONFIGURO DE MANERA EXPLICITA*/
+    grid-template-columns: 1fr 1fr 1fr ;
+
+    /* fr unidad de medida de grid*/
+    /* REPIT (): SIMPLIFICA LA CANTIDAD DE COLUMNAS EJ: REPEAT (6,1FR)
+
+    /* aire a las conlumnas*/
+
+    column-gap: 5px;
+    row-gap: 8px;
+    /*gap: para dar el mismo porsentaje de aire para los dos lados*/
+
+
+
+
+}
+
+/*MOBILE FIRTS*/
+
+header {
+    background-color: aqua;
+    grid-area: header;
+}
+
+nav {
+    background-color: blue;
+    grid-area: nav;
+}
+
+main {
+    background-color: blueviolet;
+    grid-area: main;
+    height: 200px;
+}
+
+.primerSeccion {
+    background-color: #CB48C5;
+    grid-area: primeraseccion;
+    height: 200px;
+}
+
+.segundaSeccion {
+    background-color:#186045 ;
+    grid-area: segunda;
+    height: 200px;
+}
+
+aside {
+    background-color: #EF9420;
+    grid-area: publicidad;
+    height: 200px;
+}
+
+footer {
+    background-color:#EF204C ;
+    grid-area: footer;
+    height: 200px;
+    font-weight: 100;
+}
+
+.gridPadre {
+    text-align: center;
+}
+
+/*VERSIÓN TABLETA*/
+/*SI LA PANTALLA TIENE UN MINIMO DE 768 PX QUE SE EJECUTE ESTE CODIGO*/
+
+@media (min-width:768px)  {
+    .gridPadre {
+        display: grid;
+        grid-template-areas: 
+        "header header"
+        "nav primerSeccion"
+        "nav segundaSeccion"
+        "main publicidad"
+        "footer footer"
+    }
+}
